@@ -16,6 +16,7 @@ go get -u github.com/dmitryburov/gorm-paginator
 ## Usage
 
 - GORM Guides: https://gorm.io
+- See full example: [example/example.go](https://github.com/dmitryburov/gorm-paginator/blob/master/example/example.go)
 
 ```go
 type Book struct {
