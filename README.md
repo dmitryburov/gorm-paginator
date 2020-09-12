@@ -1,6 +1,6 @@
 # GORM V2 paginator
 
-A paginator doing cursor-based pagination based on [GORM v2](https://github.com/go-gorm/gorm)
+A paginator doing cursor-based pagination based on [GORM v2](https://github.com/go-gorm/gorm).
 
 > Please, checkout release and docs, for introduces some incompatible-API change and many improvements: <br>[GORM 2.0 Release Note](https://gorm.io/docs/v2_release_note.html)
 
@@ -50,7 +50,7 @@ if err != nil {
 }
 
 fmt.Printf("%+v\n", bookList.Items)      // result data
-fmt.Printf("%+v\n", booklist.Pagination) // result bookList
+fmt.Printf("%+v\n", booklist.Pagination) // result pagination
 
 ```
 
