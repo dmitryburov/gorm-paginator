@@ -1,0 +1,17 @@
+# file exetensions
+.DS_Store
+Thumbs.db
+*.zip
+*.gzip
+*.gz
+*.tgz
+*.tar
+*.gz.[0-9]
+*.sql
+*.log
+*.exe
+*.db
+
+# platform
+/.idea/*
+/.git/*
