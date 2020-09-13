@@ -108,3 +108,7 @@ func getCounts(db *gorm.DB, anyType interface{}, done chan bool, count *int64) {
 	db.Model(anyType).Count(count)
 	done <- true
 }
+
+func (p Pagination) IsEmpty() bool {
+	return p.TotalRecords <= 0
+}

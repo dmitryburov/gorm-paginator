@@ -49,6 +49,11 @@ if err != nil {
     log.Fatal("Error get list: ", err.Error())
 }
 
+// if empty list
+//if bookList.Pagination.IsEmpty() {
+//
+//}
+
 fmt.Printf("%+v\n", bookList.Items)      // result data
 fmt.Printf("%+v\n", booklist.Pagination) // result pagination
 

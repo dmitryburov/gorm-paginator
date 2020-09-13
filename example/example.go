@@ -79,6 +79,11 @@ func getBookList(w http.ResponseWriter, r *http.Request) {
 		log.Fatal("Error get list: ", err.Error())
 	}
 
+	// if empty list
+	//if bookList.Pagination.IsEmpty() {
+	//
+	//}
+
 	w.Header().Set("Content-Type", "application/json")
 	err = json.NewEncoder(w).Encode(bookList)
 	if err != nil {
