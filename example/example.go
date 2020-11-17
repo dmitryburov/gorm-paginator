@@ -47,8 +47,8 @@ func getBookList(w http.ResponseWriter, r *http.Request) {
 		dbEntity = db
 		paging   = paginator.Paging{}
 		bookList = struct {
-			Items      []*Book
-			Pagination *paginator.Pagination
+			Items      []*Book               `json:"items"`
+			Pagination *paginator.Pagination `json:"pagination"`
 		}{}
 	)
 
