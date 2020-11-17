@@ -1,8 +1,10 @@
 package paginator
 
 import (
-	"gorm.io/gorm"
+	"errors"
 	"math"
+
+	"gorm.io/gorm"
 )
 
 type Pagination struct {
@@ -72,9 +74,8 @@ func Pages(p *Param, result interface{}) (paginator *Pagination, err error) {
 	}
 
 	// get
-	res := db.Limit(p.Paging.Limit).Offset(offset).Find(result)
-	if res.Error != nil {
-		return nil, res.Error
+	if errGet := db.Limit(p.Paging.Limit).Offset(offset).Find(result).Error; errGet != nil && !errors.Is(errGet, gorm.ErrRecordNotFound) {
+		return nil, errGet
 	}
 	<-done
 
