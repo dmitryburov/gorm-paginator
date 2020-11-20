@@ -39,7 +39,7 @@ var (
 // }
  
 // change DB filters and ect.
-// dbEntity.Where("id > ?", 1)
+// dbEntity = dbEntity.Where("id > ?", 1)
 
 bookList.Pagination, err := paginator.Pages(&paginator.Param{
     DB:     dbEntity,

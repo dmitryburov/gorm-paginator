@@ -68,7 +68,7 @@ func getBookList(w http.ResponseWriter, r *http.Request) {
 	// paging.ShowSQL = true
 
 	// if need conditions or more
-	// dbEntity.Where("id = ?", 1)
+	dbEntity = dbEntity.Where("id = ?", 1)
 
 	// get data with pagination
 	bookList.Pagination, err = paginator.Pages(&paginator.Param{
