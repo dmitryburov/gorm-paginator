@@ -34,7 +34,7 @@ func Pages(p *Param, result interface{}) (paginator *Pagination, err error) {
 
 	var (
 		done     = make(chan bool, 1)
-		db       = p.DB
+		db       = p.DB.Session(&gorm.Session{})
 		defPage  = 1
 		defLimit = 20
 		count    int64
